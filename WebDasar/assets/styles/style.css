@@ -1,0 +1,225 @@
+*{  
+  padding: 0;
+  margin: 0;
+  font-family: "Manrope", serif;
+  box-sizing:border-box;
+}
+body, html{
+  scroll-behavior: smooth;
+}
+header, .head-cont{
+  display: inline;
+}
+.head-jumbo{
+  width: 100%;
+  background-image: url('../images/tugu_jogja_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(245, 117, 113, 0.5);
+  background-blend-mode: luminosity;
+  padding: 1px;
+  transition: background-image 1s ease-in-out;
+}
+.head-jumbo img{
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  object-position: 0 -535px;
+  opacity: 0.1;
+}
+.head-jumbo .text-jumbo{
+  margin: auto;
+  color: white;
+  text-align: center;
+  padding: 80px;
+}
+
+.logo-nav {
+    background: #E31E24;
+    display: flex;
+    padding: 10px 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+.head-cont{
+  display: inline;
+}
+.head-logo img{
+  width: 100px;
+  margin: 0 auto;
+}
+.head-nav ul{
+  display: flex;
+  margin: auto;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.head-nav li{
+  list-style-type:none;
+  padding: 10px;
+}
+.head-nav li:hover{
+  background:#c11217;
+}
+.head-nav a{
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+.head-nav .menu-wis ul{display: unset;}
+.head-nav li .city-list {
+  display: none; /* Menu disembunyikan secara default */
+  background-color: #c11217;
+  color: white;
+  padding: 0 10px;
+  position: absolute;
+  right: 0px;
+  width: 150px;
+  margin-top: 10px;
+}
+.head-nav .menu-wis li{
+ 
+  margin: 10px 0;
+  padding: 0;
+}
+.head-nav .menu-wis li a{ 
+  width: 100%;
+  display: block;
+  padding: 10px;
+}
+.head-nav .menu-wis li:hover{
+   width: 100%;
+  background: #e31e24;
+  text-align: center;
+}
+main{
+  display: flex;
+  gap: 20px;  
+  padding: 20px;
+}
+main .content{
+  width: 70%;
+}
+main aside{
+  width: 30%;
+}
+.content article, aside article{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.content article, aside .profil{
+  padding: 40px 20px;
+  margin-top: 20px;
+}
+.content article h1{
+  margin: 15px 0;
+  font-size: 24pt;
+}
+.content .cont-txt{
+  flex: 5;
+}
+.content article p{
+  margin: 15px 20px;
+  text-align: justify;
+}
+.wis-city{
+  padding: 50px 0 10px 30px;
+}
+.wis-city h2{
+  margin: 10px 0;
+}
+.cont-wis-img, .content .cont-img{
+  width:50%;
+  margin:20px auto;
+}
+.cont-wis-wrp h3{
+  margin:15px 0px;
+}
+.cont-wis-wrp{
+  padding: 10px 0 0 40px;
+}
+
+.content .cont-wis-img img, .content .cont-img img{
+     width: 100%;
+     max-height: 300px;
+     object-fit: cover;
+     object-position: center;
+}
+.profil{
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.profil h2{
+  margin: 15px 0;
+}
+.profil th {
+    text-align: left;
+    vertical-align: top;
+    width: 100px;
+    padding: 5px; 
+}
+.profil header{
+  text-align: center;
+}
+.profil img{  
+  height: 200px;
+}
+footer {
+    padding: 30px;
+    color: white;
+    background-color: #e31e24;
+    text-align: center;
+    font-weight: bold;
+}
+@media screen and (max-width: 950px) {
+  main{
+    display: block;
+  }
+  .content, aside{
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .cont-wis-img, .content .cont-img{
+  width:70%;
+  margin:20px auto;
+}
+  .head-logo, .head-nav{
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 550px) {
+  .head-logo{width: 100%;text-align: center;}
+  .head-nav ul{
+    gap:5px;
+  }
+  .logo-nav{padding: 10px;}
+  .head-nav ul{    
+  justify-content: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .head-nav li .city-list li:hover{
+    text-align: start;
+  }
+  .head-nav li .city-list a:hover{    
+    padding-left: 30px;
+  }
+  .head-nav li .city-list{
+    width: 50%;
+  }
+  .wis-city, .cont-wis-wrp{
+  padding: 10px;
+}
+  .cont-wis-img, .content .cont-img{
+  width:80%;
+  margin:20px auto;
+}
+}
