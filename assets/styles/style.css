@@ -4,6 +4,9 @@
   font-family: "Manrope", serif;
   box-sizing:border-box;
 }
+body, html{
+  scroll-behavior: smooth;
+}
 header, .head-cont{
   display: inline;
 }
@@ -15,6 +18,7 @@ header, .head-cont{
   background-color: rgba(245, 117, 113, 0.5);
   background-blend-mode: luminosity;
   padding: 1px;
+  transition: background-image 1s ease-in-out;
 }
 .head-jumbo img{
   width: 100%;
@@ -56,10 +60,40 @@ header, .head-cont{
   list-style-type:none;
   padding: 10px;
 }
+.head-nav li:hover{
+  background:#c11217;
+}
 .head-nav a{
   color: white;
   text-decoration: none;
   font-weight: 500;
+  cursor: pointer;
+}
+.head-nav .menu-wis ul{display: unset;}
+.head-nav li .city-list {
+  display: none; /* Menu disembunyikan secara default */
+  background-color: #c11217;
+  color: white;
+  padding: 0 10px;
+  position: absolute;
+  right: 0px;
+  width: 150px;
+  margin-top: 10px;
+}
+.head-nav .menu-wis li{
+ 
+  margin: 10px 0;
+  padding: 0;
+}
+.head-nav .menu-wis li a{ 
+  width: 100%;
+  display: block;
+  padding: 10px;
+}
+.head-nav .menu-wis li:hover{
+   width: 100%;
+  background: #e31e24;
+  text-align: center;
 }
 main{
   display: flex;
@@ -84,22 +118,6 @@ main aside{
   margin: 15px 0;
   font-size: 24pt;
 }
-/*.content .cont-arc-wrp{
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-.content .cont-img img{
-  min-width: 300px;
-  height: auto;
-  object-fit: cover;
-  object-position: center;
-  width: 100%;
-}
-.content .cont-img{
-  flex: 2;
-  margin: 15px 0;
-}*/
 .content .cont-txt{
   flex: 5;
 }
@@ -108,7 +126,7 @@ main aside{
   text-align: justify;
 }
 .wis-city{
-  padding: 10px 0 10px 30px;
+  padding: 50px 0 10px 30px;
 }
 .wis-city h2{
   margin: 10px 0;
@@ -161,7 +179,7 @@ footer {
 }
 @media screen and (max-width: 950px) {
   main{
-    flex-direction: column-reverse;
+    display: block;
   }
   .content, aside{
     width: 100% !important;
@@ -172,13 +190,14 @@ footer {
   width:70%;
   margin:20px auto;
 }
-}
-@media screen and (max-width: 550px) {
-  .head-nav ul{
-    gap:5px;
-  }
   .head-logo, .head-nav{
     margin: 0 auto;
+  }
+}
+@media screen and (max-width: 550px) {
+  .head-logo{width: 100%;text-align: center;}
+  .head-nav ul{
+    gap:5px;
   }
   .logo-nav{padding: 10px;}
   .head-nav ul{    
@@ -187,6 +206,15 @@ footer {
 }
 
 @media screen and (max-width: 450px) {
+  .head-nav li .city-list li:hover{
+    text-align: start;
+  }
+  .head-nav li .city-list a:hover{    
+    padding-left: 30px;
+  }
+  .head-nav li .city-list{
+    width: 50%;
+  }
   .wis-city, .cont-wis-wrp{
   padding: 10px;
 }
